@@ -193,7 +193,7 @@ svg {
   background-color: var(--bs-black);
   color: var(--bs-white);
   padding: 0.5em 1em;
-  max-width: 100%;
+  width: 102%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -218,7 +218,7 @@ svg {
 
 #global-nav-toggle {
   background-color: var(--bs-black);
-  height: 66px;
+  height: 68px;
   color: var(--bs-white);
   display: flex;
   align-items: center;
@@ -246,13 +246,17 @@ svg {
   object-position: center;
 }
 
+#park-header {
+ width: 110%;
+}
+
 .hero-banner__content {
   position: absolute;
   transform: translate(0%, -105%);
   color: var(--bs-white);
   text-align: center;
   background-color: #00000080;
-  width: 100%;
+  width: 110%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -317,4 +321,36 @@ svg {
 }
 .hero-banner__subtitle span {
   text-align: left;
+}
+
+#park-footer {
+  background-image: url("../images/topo_pattern.png");
+  background-repeat: repeat;
+  width: 110%;
+}
+
+.contact {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+}
+
+.contact h3 {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+}
+
+#main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main h2 {
+  font-family: var(--bs-font-serif);
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-weight: 500;
 }
