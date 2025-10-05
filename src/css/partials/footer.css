@@ -1,0 +1,17 @@
+
+#park-footer {
+  background-image: url("../images/topo_pattern.png");
+  background-repeat: repeat;
+  width: 110%;
+}
+
+.contact {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+}
+
+.contact h3 {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+}

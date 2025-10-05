@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  font-size: 18px;
+  margin: 0;
+}
+
+/* a:link,
+a:visited {
+  color: var(--bs-link-color);
+} */
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+.global-nav {
+  display: none;
+}
+
+#global-nav-toggle {
+  background-color: var(--bs-black);
+  height: 68px;
+  color: var(--bs-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+}
+
+#global-nav-toggle svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
