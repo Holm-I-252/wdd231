@@ -189,6 +189,10 @@ svg {
   text-decoration: none;
 }
 
+header {
+  max-width: 100%;
+}
+
 .global-header {
   background-color: var(--bs-black);
   color: var(--bs-white);

@@ -1,17 +1,17 @@
 export function parkInfoTemplate(info) {
-  return `<a href="/" class="hero-banner__title">${info.name}</a>
+  return `<a href="/" class="hero-banner__title">${info.data[0].name}</a>
   <p class="hero-banner__subtitle">
-    <span>${info.designation}</span>
-    <span>${info.states}</span>
+    <span>${info.data[0].designation}</span>
+    <span>${info.data[0].states}</span>
   </p>`;
 }
 
 export function introTemplate(info) {
-  return `<h2>${info.fullName}</h2>
-  <p>${info.description}</p>`;
+  return `<h2>${info.data[0].fullName}</h2>
+  <p>${info.data[0].description}</p>`;
 }
 
-export function mediaCardTemplate(info) {
+export function mediaCardTemplate(info, park) {
   return `<div class="media-card">
     <img src="${info.image}" alt="${info.name}" class="media-card__img"/>
     <div class="media-card__content">
@@ -22,8 +22,8 @@ export function mediaCardTemplate(info) {
 }
 
 export function footerTemplate(info) {
-  const mailingAddress = info.addresses.find((address) => address.type === "Mailing");
-  const voiceNumber = info.contacts.phoneNumbers.find((number) => number.type === "Voice");
+  const mailingAddress = info.data[0].addresses.find((address) => address.type === "Mailing");
+  const voiceNumber = info.data[0].contacts.phoneNumbers.find((number) => number.type === "Voice");
 
   return `<section class="contact">
   <h3>Contact Info</h3>
