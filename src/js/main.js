@@ -1,5 +1,5 @@
 import { getParkData, getParkInfoLinks } from "./parkService.mjs";
-import { parkInfoTemplate, mediaCardTemplate, introTemplate } from "./templates.mjs";
+import { mediaCardTemplate, introTemplate } from "./templates.mjs";
 import {setHeaderFooter} from "./setHeaderFooter.mjs";
 
 // const parkData = getParkData();
@@ -41,8 +41,20 @@ function setMediaCards(cardsArray) {
   });
 }
 
-// setHeaderFooter(parkData);
-
-
-// setIntro(parkData);
-
+function enableNavigation() {
+  const menuButton = document.querySelector("#global-nav-toggle");
+  menuButton.addEventListener("click", (ev) => {
+    let target = ev.target;
+  document.querySelector(".global-nav").classList.toggle("show");
+  if (target.tagName != "BUTTON") {
+    target = target.closest("button");
+  }
+  if (document.querySelector(".global-nav").classList.contains("show")) {
+    target.setAttribute("aria-expanded", true);
+  } else {
+    target.setAttribute("aria-expanded", false);
+  }
+  console.log("toggle");
+  });
+}
+enableNavigation();
