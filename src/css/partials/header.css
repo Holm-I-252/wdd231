@@ -6,9 +6,10 @@ header {
   background-color: var(--bs-black);
   color: var(--bs-white);
   padding: 0.5em 1em;
-  width: 110%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr auto;
+  padding-left: 10px;
 }
 
 .global-header__right {
@@ -37,7 +38,7 @@ header {
 }
 
 #park-header {
- width: 110%;
+ width: 100%;
 }
 
 .hero-banner__content {
@@ -46,7 +47,7 @@ header {
   color: var(--bs-white);
   text-align: center;
   background-color: #00000080;
-  width: 110%;
+  width: 100%;
   height: 100px;
   display: flex;
   flex-direction: row;
@@ -165,10 +166,12 @@ header {
 .global-nav__toggle--closed {
   display: flex;
   align-items: center;
+  height: 20px;
 }
 .global-nav__toggle--open {
   display: none;
   align-items: center;
+  height: 20px;
 }
 .global-nav__toggle[aria-expanded="true"] > .global-nav__toggle--open {
   display: flex;
@@ -225,7 +228,88 @@ header {
 .icon {
   height: 20px
 }
+.global-nav__split-button {
+  background-color: var(--bs-black);
+  border: none;
+  padding: 1rem 1rem 1rem 1rem 0rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.global-nav__split-button a:hover{
+color: var(--bs-grey-6);
+}
 .global-nav__split-button a {
   text-decoration: none;
   color: var(--bs-white);
+  width: 50%;
+  font-size: 27px;
+}
+.global-nav__submenu {
+  display: none;
+  padding-left: 10px;
+}
+.global-nav__submenu.show {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.global-nav__submenu a {
+  color: var(--bs-white);
+  text-decoration: none;
+  font-size: 27px;
+}
+.global-nav__submenu li{
+  margin: 10px 0px;
+}
+
+.global-nav__split-button__toggle svg {
+  width: 50px;
+}
+
+.global-nav__list {
+  padding-left: 10px;
+}
+
+.global-nav__list li {
+  list-style: none;
+}
+
+.global-nav__section-heading {
+  color: var(--bs-chathams-blue-3);
+}
+
+@media (min-width: 786px) {
+  .global-nav > h2,
+  .global-nav__list:first-of-type {
+    display: none;
+  }
+  .global-nav__submenu,
+  .global-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .global-nav__split-button {
+    background-color: inherit;
+  }
+  .global-nav__split-button > button {
+    display: none;
+  }
+  .global-nav__submenu {
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+  }
+  .global-nav__submenu a {
+    padding: 0.625rem;
+  }
+  .global-nav__split-button a {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

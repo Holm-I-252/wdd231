@@ -1,4 +1,5 @@
 import { parkInfoTemplate, footerTemplate } from "./templates.mjs";
+import { enableNavigation } from "./navigation.mjs";
 
 export function setHeaderInfo(data) {
   const disclaimer = document.querySelector(".disclaimer > a");
@@ -18,4 +19,5 @@ export function setFooterInfo(info) {
 export function setHeaderFooter(data){
     setHeaderInfo(data);
     setFooterInfo(data);
+    enableNavigation();
 }
